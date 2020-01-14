@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		<h1>江勇杰 React 项目日报</h1>
+		<div>
+			<h2>bug</h2>
+			<p>1.项目刚进去时宽度和高度会超出一些,但是调一下其他手机就会便正常</p>
+			<p>2.换头像时会出现一些莫名的bug,但是它又不会报错</p>
+			<p>3.进购物车时未登录不会重定向到登录页面,会报错,但是刷新一下就会到登录页面</p>
+		</div>
+		<hr >
+		<div>
+			<h2>亮点</h2>
+			<p>1.使用了antd-mobile这个移动端UI库,以及短信验证码登录</p>
+			<p>2.商品分类,根据每个商品的分类状态去重之后得到的数组渲染到不同的选项卡,然后通过得到的分类状态来和库里面的状态进行对比来渲染不同的数据</p>
+			<p>3.购物车的单选,全选,反选,根据商品的选中状态获得选种商品的数量和总价,删除选中</p>
+		</div>
+		<hr >
+		<div>
+			<h2>难点</h2>
+			<p>1.用户登录时手机验证码的登录时,生成一个随机4位数,进行验证</p>
+			<p>2.头像上传时,先有一个本地照片,换头像之后将手机号和头像存入localStorage中,下次登录时会先从本地拿头像,没有就从线上拿</p>
+			<p>3.购物车得用mobx写,商品数量的加减会有computed进行计算,但是redux没有</p>
+		</div>
+	</body>
+</html>

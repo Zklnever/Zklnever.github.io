@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>毛家乐React总结</h1>
+    <p style="background-color:#f6f6f6">这是我的笔记项目音乐管理系统，利用react + react-router + hooks + ant design编写而成。具体模块有</p>
+
+    <div class="box" style="width:300px;height:600px;background-color:#f6f6f6;">
+        <p>1. 登录、退出</p>
+        <p>2. 笔记管理</p>
+        <p>-笔记修改,删除</p>
+        <p>-添加笔记</p>
+        <p>-草稿箱
+            <p>3.标签管理</p>
+            <p>-新增 修改 和删除标签</p>
+            <p>4留言墙管理</p>
+            <p>-新增,修改,删除留言</p>
+            <p>5.笔记评论管理</p>
+            <p>新增,修改,删除留言</p>
+            <p>6.项目管理</p>
+            <p>新增,修改,删除</p>
+            <p>7.音乐管理</p>
+            <p>新增,修改,删除音乐</p>
+            <p>上传音乐文件,海报图片</p>
+    </div>
+    <div class="money" style="width:1000px; height:600px;background-color:#f6f6f6;margin-left:350px;margin-top:-600px;">
+        <span>
+            Redux 必须明确的几个对象：
+            action =>
+            从名字上理解，动作。所以，其实一个action可以是一个简单的动作，譬如一个计算方法，最终得到一个数据，就是model。所以，直接定义成一个model也是可以的。反正达到最终目的是一样的。但是一般情况下都是定义成方法，最后返回一个model。model，model，model顾名思义就是我们常见MVC里面的M。很好理解，就是一个数据传输模型。
+            注意： 每个action需要有个type属性，而且是全局唯一的，一般用一个常量来表示，这个在后面reducer计算state的时候很有用。
+        </span>
+        <br>
+        <hr>
+        <span>
+            reducer =>
+            不知道为什么叫reducer，但是只需要明白，它只有一个目的，非常单纯。那就是，根据上一个state与当前输入的action，计算得到一个新的state。目的很明确，就是计算生成一个新的state，新的state，新的state。所以，一个reducer方法，他的实现就是：输入两个参数
+            state， action，返回一个新的state。eg：
+        </span>
+        <hr>
+        <span>
+            dispatch =>
+            所有的action都必须是由dispatch调度，一个action是通过dispatch函数发送出去的，也是唯一的途径。因为redux单向数据流的设计，一个数据只能是从一个入口一直往下流，不能有多个入口同时进入。通常，UI上的一个事件触发会发起一个dispatch动作。把action传入reducer进行计算，得到一个state。
+        </span>
+        <hr>
+        <span>
+            mapStateToProps =>
+            看名字大概都能明白这个方法是什么作用。就是把state映射到（或者说是绑定到）组件的props上，供组件渲染UI。其实就是，state属性跟组件的props属性的一一对应。一般都是出现在container里，注意，这里只是配置映射规则，后面还需要connect来真正映射到组件上的。
+        </span>
+        <hr>
+        <span>
+            mapDispatchToProps =>
+            这个方法类似于上面的，但是他是专门处理事件的，所以，从名字也可以看出，dispatch，其实就是触发一个action的传递，通常是有事件动作来完成。所以，基本上可以理解为，把dispatch动作绑定到组件的props事件属性上面，例如一个click动作。一般都是出现在container里，注意，这里只是配置映射规则，后面还需要connect来真正映射到组件上的。
+        </span>
+        <hr>
+        <span>
+            connect => 具体细节还不是特别清楚，大概明白它应该就是实现如何把mapStateToProps，mapDispatchToProps配置的映射关系和真正的组件关联起来。
+        </span>
+        <hr>
+        <span>
+            store =>
+            相当于一个数据仓库，也是全局唯一一个数据仓库。可以理解为一个数据库，存储所有的state。store需要绑定到一个根组件provider上面去。创建一个store的时候需要把reducers传进去，这个动作可以理解为在数据库上封装了一层curd操作，这个curd操作就是有reducer来完成的。所以，必须提供reducer方法，所以，为什么说state的改变只能是通过dispatch触发action，交由reducer来计算输出state。因为reducer就是最底层的数据操作层。store拿到新的state之后，会publish一个事件，其实订阅者可以监听到state的变化，进行对应的操作，通常就是组件的重新渲染之类的。整个调度的核心就在这个store上了。
+        </span>
+    </div>
+</body>
+
+</html>
