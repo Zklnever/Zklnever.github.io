@@ -1,0 +1,71 @@
+
+
+@import "animate.css";
+@import "common";
+@import "./fonts/iconfont.css";
+@import "antd-mobile.css";
+
+
+$base_ft:20px;  /*no*/
+$base_color:red;
+
+html,body,#app,.main{
+    width:100vw;
+    height:100vh;
+}
+
+* {
+    touch-action: pan-y;
+}
+
+
+// body{
+//     background:yellowgreen;
+//     #app{
+//         font-size: $base_ft; 
+//         color:$base_color;
+//         border:1px solid darkgreen;
+//         height:400px ;   /*no*/
+//         width:400px;
+//     }
+// }
+
+
+.one{
+    font-size:40px;
+    color:darkgreen;
+}
+
+.happy{
+    font-size: 50px;
+    background: -webkit-linear-gradient(left,red 20%,yellow 50%, blue 80%, green 100%);
+}
+
+
+.my-btn{
+    border:none;
+    outline:none;
+    padding:10px;
+    border:1px solid darkblue;
+    border-radius: 10px;
+}
+
+.btn{
+    color:#fff;
+    background: darkmagenta;
+    font-size: 24px;
+}
+
+
+.move-in{
+    animation:zoomInDown 1.2s;
+}
+
+.move-out{
+    animation:zoomOutDown 1.2s;
+}
+
+.active{
+    color:red;
+    border:1px solid darkgreen;
+}
