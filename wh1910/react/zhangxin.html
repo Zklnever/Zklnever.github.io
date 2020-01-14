@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>项目总结</title>
+    <style>
+        .box {
+            width: 42%;
+            margin-left: 30%;
+        }
+        .zj{
+            line-height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>张鑫 React 项目总结 </h2>
+
+        <hr>
+   
+    <div>
+
+       
+        <h2>技术栈</h2>
+        <p> react+react-redux+immutable+mobx+antd-mobile+webpack</p>
+        <hr>
+        <h2>项目难点</h2>
+        <p>1.拦截器验证token,封装一个验证手机号token的方法,在每次操作线上数据时先验证token</p>
+        <p>2.头像上传,头像保存到本地localStorage,当本地有头像数据时取本地的数据,没有时才选用线上的最新上传的头像</p>
+        <p>3.购物车里商品进行增加或减少数量操作时,可以根据是否选中的状态进行操作</p>
+        <hr>
+        <h2>项目亮点</h2>
+        <p>1.收货地址的增删改查,根据收货地址的选中状态确认默认收货地址</p>
+        <p>2.商品详情收藏功能,收藏列表里取消收藏的功能</p>
+        <p>3.购物车的单选,全选,反选;根据商品的选中状态获得选种商品的数量和总价</p>
+        <hr>
+        <h2>项目Bug</h2>
+        <p>1.修改地址选中状态时,数据库更新页面却不会立即重新渲染</p>
+        <p>2.点击修改地址后将选中的原地址信息带到修改的页面中,但每次都固定只带第一个原地址信息过来</p>
+        <p>3.购物车全选后点击移除选中,全选按钮的勾选不会取消</p>
+        <hr>
+        <h2>总结</h2>
+        <p class="zj">react项目前前后后用了八天的时间完成,深切体会到了模块化开发的优点,模块化能让自己思路更为清晰,降低代码耦合,降低了开发的难度;本次项目用到了大量的
+            react-redux,只需要“简单”的三步:发出action、store自动调用reducer返回新的state、组件里dispatch发送事件,就能操作了;react-redux通过中间件（middleware）就能
+            实现在action里面发送异步请求,非常的方便;项目中也使用了部分mobx,mobx的优点有很多,用起来很简单,渲染性能好,大大减少了代码量;
+            这次写项目,自己对框架的运用更加熟练了,对数据库的操作也更加得心应手。
+        </p>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
