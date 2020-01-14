@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destiny Ou</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            padding: 20px;
+        }
+        .box{
+            padding-left:20px ;
+        }
+        li {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div  class="box">
+        <h1>React 项目总结</h1>
+        <p>
+            <span>第一天：完成项目类型的选择，确定了基调。
+                <span style="color:red">但是在项目路由配置卡住了，没能完全理解react里面的路由配置。</span>
+                <span>所以我先去完成了登录页面</span>
+            </span>
+            <br>
+            <span>第二天：登陆页面样式基本完成，开始测试短信接口是否能够正常使用
+                <span>短信接口选择的是阿里云的短信接口，经测试可以正常使用，</span>
+                <span>接下来依旧要完成路由配置，经过半天的尝试终于配置好了路由
+                    <span style="color:blue">详见components内的mainRoute文件</span>
+                </span>
+            </span>
+            <br>
+            <span>第三天：选的项目基本UI库，AntD，开始完成成品出库页面
+                <span>该页面采用了redux+immutableJs来管理页面中的数据</span>
+                <span>该页面是使用了AntD的table、modal、message、Radio组件</span>
+                <span style="color:red">其中难点在于两点，
+                    1.redux+immutable管理数据虽然可以缓存数据，但是数据修改麻烦。比如setIn getIn等
+                    2.AntD里面的组件，特别是table组件不是常见的复制可用的组件，需要自己修改，并且数据结构必须吻合，增加了很多不必要的数据操作
+                </span>
+            </span>
+            <br>
+            <span>第四天：成品出库页面完成一大半，剩下一些Bug需要解决
+                <span style="color:red">bug1:数据修改成功页面不刷新</span>
+                <span style="color:red">bug2:增加产品或删除产品时总价格，总运费，总杂费，加减结果不对</span>
+                <span> 下午解决了所有bug开始写成品出库单页面的样式</span>
+            </span>
+            <br>
+            <span>第五天：成品出库单页面样式完成
+                <span>成品出库单的主要组件同样时table，但是加入了排序，筛选、支持日期，价格排序，产品、联系人筛选</span>
+                <span>并且加入了修改和删除选项</span>
+                <span style="color:red">其中删除遇到Bug
+                    <span>因为删除使用的抽屉组件，所以和成品出库页面共用了相同的自定义组件用来显示详情</span>
+                    <span>所以两个不同的页面使用相同的组件，在传值上出现了混乱，页面无法定义到自己到底接收了那边传来的值</span>
+                    <span>解决办法：在传值的时候传入不同的type；在组件接受值的时候进行判断，来决定组件应该使用那个值来渲染页面</span>
+                </span>
+            </span>
+            <br>
+            <span>第六天：开始日报表页面
+                <span>日报表页面的主要使用了mobx来管理数据，组件上使用了list和modal</span>
+                <span>其中新建和详情使用的同一个组件，只是新建可以对数据进行修改，而详情不能</span>
+                <span>list在渲染时引入了新建报表时用户的头像，时间戳等特性进行区分，列表每次显示5条数据</span>
+                <span>页面加入了搜索功能，可以使用标题和内容进行搜索，</span>
+            </span>
+            <br>
+            <span>第七天：总报表
+                <span>总报表页面实际是已echart完成的</span>
+                <span>其中大数据量面积图是使用代码实现的随机数据渲染的，</span>
+                <span>其中城市空气质量图是使用死数据完成的</span>
+                <span>开始完成BBS功能，计划在联系人中加入一个类似贴吧的功能</span>
+            </span>
+            <br>
+            <span>第八天：贴吧功能
+                <span>贴吧功能分为三部分：1.帖子列表，2.我的发布，3.我要发布</span>
+                <span>帖子列表主要是使用list组件完成，和日报表页面list没什么区别</span>
+                <span>我的发布使用了braft-editor富文本编辑器</span>
+                <span>我的发布主要是查看自己发表的内容</span>
+            </span>
+        </p>
+    </div>
+    <div  class="box">
+        <h2>项目遇到的Bug</h2>
+        <span>已在上述日志中详细说明，此处不在赘述</span>
+    </div>
+    <div class="box">
+        <h2>项目亮点</h2>
+        <ol>
+            <li>项目采用了短信验证登录舍弃了传统的用户名和密码，不仅更方便，同时更安全</li>
+            <li>支持用户自定义头像，并结合了前端存储，避免不必要的数据请求，优化性能</li>
+            <li>项目全程采用redux+immutable+mobx进行数据管理，增强了页面之间的数据共享</li>
+            <li>项目的组件基本全是采用的懒加载，优化了性能</li>
+            <li>页面样式采用UI库，样式简洁大方</li>
+        </ol>
+    </div>
+    <div class="box">
+        <h2>项目难点</h2>
+        <ol>
+            <li>redux+immutable+mobx初次使用，不熟练，数据修改是难点</li>
+            <li>项目使用了很多表格组件，因为组件对数据结构的要求严格，数据处理是难点</li>
+            <li>因为使用了UI组件所以样式极难调整，经常因为样式问题卡很久</li>
+        </ol>
+    </div>
+</body>
+
+</html>

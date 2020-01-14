@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hule</title>
+</head>
+
+<body>
+  <h2>胡乐 React 项目总结 </h2>
+  <div>
+    <h2>bug总结</h2>
+
+    <div>
+      <p>1.echart数据在初始化设置后不能更改的问题,只能通过echart自带的方法才能修改数据</p>
+      <p>2.异步数据无法及时更新视图的问题</p>
+      <p>3.Antd Design一些组件在使用中产生的问题</p>
+      <p>4.在设置管理员账户后,未经过手机号验证码登录,产生token验证问题</p>
+    </div>
+    <hr>
+
+    <h2>项目难点</h2>
+    <div>
+      <p>1.用户登录时的token验证比较复杂,先要在axios中配制请求头,将后端生成的token一并发送给后端进行验证</p>
+      <p>2.用户头像上传,图片的存储和替换问题较为复杂,需要通过多次判断,最后替换初始图片</p>
+      <p>3.用户登录时的手机验证码的验证,需要在登录时随机生成验证码,并在后端进行验证码的验证</p>
+    </div>
+    <hr>
+
+    <h2>项目亮点</h2>
+    <div>
+      <p>1.使用mobx实现数据的实时更新</p>
+      <p>2.实现了对用户提交项目的增,删,改,查,评分等功能</p>
+      <p>3.实现对面试广场部分的题目发表,答题,查看答案等功能</p>
+    </div>
+    <hr>
+    <div>
+      <p>react项目花了有很多的时间了,但是还是有一些功能未能实现,如用户提交面试题获得积分,用户成绩对比的图表展示等</p>
+      <p>虽然学习react有很多时间,但有一些知识吸收不够,导致浪费了很多时间在基础的问题的上,在此次的项目中看到了自己的不足之处</p>
+    </div>
+
+  </div>
+</body>
+
+</html>
