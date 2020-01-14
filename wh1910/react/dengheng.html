@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>邓恒react</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>邓恒react 项目总结</h2>
+    <div>
+        <h2>三个bug</h2>
+        <p>首页在初次加载时会出现footer宽度超出，样式失效，刷新后恢复</p>
+        <p>购物车页面在未登录状态，会出现页面挂掉，刷新后跳转登录</p>
+        <p>listView组件，在异步请求时，无法获取数据</p>
+        <p>listView在初次加载时，需要手动刷新，没有初始化数据</p>
+        <h2>三个优点</h2>
+        <p>listView组件，实现拉动刷新</p>
+        <p>使用jsonwebtoken，实现token生成与认证</p>
+        <p>实现了上传头像功能，并配置了页面的基本动画</p>
+        <h2>三个难点</h2>
+        <p>ListView组件的使用</p>
+        <p>使用mobox作为数据缓存</p>
+        <p>阿里云短信验证后台的实现</p>
+    </div>
+</body>
+
+</html>
