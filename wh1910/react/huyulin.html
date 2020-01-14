@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>胡育林</title>
+</head>
+<body>
+    <h2>胡育林 React  项目总结</h2>
+    <div>
+        <h2>01.14</h2>
+        <p>需求任务:1.完成登录注册,列表详情页渲染点击,2.购物车增删改,3.商品评论增删改,4.地址增删改,5.商品收藏功能,6.订单,7.socket.io聊天室功能</p>
+        <p>亮点:1.项目使用了immutable对redux进行封装,完成部分页面数据共享,使用mobx完成购物车和地址以及评论的增删改功能</p>
+        <p>2.使用对象赋值完成多层数据传值</p>
+        <p>3.前端利用sessionStorage完成部分数据存储和业务逻辑判断</p>
+        <div>
+            <p>Bug1.部分页面点击跳转是会报警告,主要还是react组件生命周期这块还是不够熟悉</p>
+            <p>Bug2.首页详情页和列表页的详情页因两者的数据结构有差异,导致没有将两个详情页合并成一个</p>
+            <p>Bug3.因前期处理bug周期太长,忽略了页面样式的美化,部分业务逻辑凭借个人思考编写,可能与大厂牛逼APP的体验差距较大</p>
+        </div>
+        <div>
+            <p>难点:</p>
+            <p>1.页面写的过于臃肿,如何将页面抽离成各个组件,将组件进行封装和共享,这是一个初学react的最大痛点</p>
+            <p>2.如何借用antd-mobile将其组件利用并二次开发完善自己的业务需求</p>
+        </div>
+        <hr>
+    </div>
+</body>
+</html>
