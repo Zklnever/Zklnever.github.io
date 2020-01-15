@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>胡银</title>
+</head>
+
+<body>
+    <hr>
+    <div>
+        <h2>0115</h2>
+        <div>
+            <h2>bug</h2>
+            <ol>
+                <li>
+                    切换到个人中心后切回推荐和搜索页面样式崩了,原因:个人中心用了类名main,主页面类名也叫main,导致样式也会加到其他页面上.
+                </li>
+                <li>
+                    推荐列表下拉刷新时,第一次刷新数据未更新,后端接收到的pageNum仍为0,前端打印出来为1,疑似后端收到的数据滞后了,后来直接将初始的pageNum改为1,解决.
+                </li>
+                <li>模块导入导出的问题,默认导出不用解构</li>
+            </ol>
+        </div>
+        <hr>
+        <div>
+            <h2>难点</h2>
+            <ol>
+                <li>搜索,下拉刷新在一个页面</li>
+                <li>头像上传,购物车操作</li>
+                <li>用antd-mobile新增收货地址</li>
+            </ol>
+        </div>
+        <hr>
+        <div>
+            <h2>亮点</h2>
+            <ol>
+                <li>使用react-redux</li>
+                <li>使用mobx</li>
+                <li>样式好看</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>
