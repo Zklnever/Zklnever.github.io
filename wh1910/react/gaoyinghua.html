@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高应华</title>
+
+</head>
+<style>
+    div {
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        color: rgb(187, 187, 187);
+        width: 80%;
+        margin: auto;
+    }
+
+    span {
+        color: red
+    }
+</style>
+
+<body>
+    <h2 style="text-align: center;color: rgb(131, 131, 131);">高应华之react项目总结</h2>
+    <div>
+        <p>
+            项目完成的不是很理想，以致现在依旧有功能未完成，还是比较重要的逻辑功能，已经写完的功能也有待优化，
+            react给我的感觉是易上手，难贯通，我找不到发力点如何运用好这个火热框架，或许是因为理解不够深入，敲的不够多的缘由吧，
+            嗯 ，麻烦的是取值那一块儿，props来props去的 后来学习到react-redux才算有取值的简便了，当老师说还有另一种简易方法，用完就再也不会redux了，
+            后来也的确入老师所说，回不去了，mobx也太好用了,也仅限于取值，难住我的是哪些逻辑、初始化、更新数据哪些比较有小细节的地方，我比较犟，不完成某个功能
+            总感觉后来的功能会被这个待完成的功能所拖累，本身个人技术不是特别的优秀，又因为特喜欢钻牛尖，导致如期了功能也不是很健全，用户体验极差，项目的BUG也比较多，
+            与其说是BUG，不如说是因为自己的大意而导致的错误，<span>单词写错 引用错误，用法理解错误，</span> 导致错误了很难往哪方面去想，因为这些都很低级，潜意识是不会去寻找这些错误的，
+            我尤其是要多注意这方面，因为这些错误带给我的困扰已经让人狂躁了，react的考试也是不尽如意，对路由switch、组件connect、取参metch、取值 这方面不是很游刃有余，后来的mobx让我在取值这方面省却了
+            很多功夫，也造成我比较依赖这个东西了,还有一个就是mobx的computed这个属性 我的项目完完全全没使用过这个属性，或许用不上，也或许是我想过在哪儿使用computed会让那个功能锦上添花，
+            我还是很缺少深入思考，独立动手的这种自我学习行为，
+
+        </p>
+        <div>
+            <p>项目bug</p>
+            <span>
+                1. 登录注册的token和发送验证码后登录到mine后token一直不存在，导致头像不能上传， 原因在于我没有带token到后端比对一致，小小的错误
+            </span>
+            <br>
+            <span>2.写详情的时候，获取axios的时候 因为是个异步 然而有一个数据 是三层的 死活获取不了
+                不会报错，也不会显示，不晓得从哪儿入手，想到老师说过可能是没有值所以取不到，
+                为什么取不到？明明数据都来了，难不成是渲染的时候数据没来？数据来的时候已经渲染完了？后来做了个判断 item.name等到它有值了在渲染，</span>
+            <br>
+            <span>
+                3 开始用redux的时候 很多时候reducers的return 老是值返回不了，或者分发后忘了合并导致取不到值
+            </span>
+        </div>
+        <p>项目亮点</p>
+        <span>使用前端最热门的框架react来搭构网页</span>
+        <span>使用阿里云的短信验证平台来完成手机登录以及注册</span>
+        <span>利用蚂蚁金服的 antd-mobile库 来美化界面 上传头像 购买商品 添加喜欢 也有一丝丝感觉 </span>
+    </div>
+
+
+</body>
+
+</html>
