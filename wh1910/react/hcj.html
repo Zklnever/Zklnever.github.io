@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>项目总结</title>
+    <style>
+        .box {
+            width: 42%;
+            margin-left: 30%;
+        }
+        .zj{
+            line-height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>何长健  项目总结 </h2>
+
+        <hr>
+   
+    <div>
+
+       
+        <h2>技术栈</h2>
+        <p> react+react-redux+immutable+mobx+antd-mobile+webpack</p>
+        <hr>
+        <h2>项目难点</h2>
+        <p>1.用户登录的时候要先验证token,根据sessionStorage里面的token是否存在来判断用户是否处于登录状态</p>
+        <p>2.头像上传,头像保存到本地localStorage,当本地有头像数据时取本地的数据,没有时才选用线上的最新上传的头像</p>
+        <p>3.订单管理需要根据订单的不同状态进行分类</p>
+        <hr>
+        <h2>项目亮点</h2>
+        <p>1.订单管理的增加和删除,以及订单的分类</p>
+        <p>2.商品详情页和商品购买页的即时渲染和更新</p>
+        <p>3.使用了mobx进行数据操作和视图的更新</p>
+        <hr>
+        <h2>项目Bug</h2>
+        <p>1.删除订单的时候,数据库确实删除了,但是页面不会重新渲染</p>
+        <p>2.注销登录的时候由于没有清空localStorage里面的个人信息和sessionStorage里面的token在登录其他账号的时候产生的token验证问题</p>
+        <p>3.antd-mobile使用过程中出现一些参数调用错误的问题</p>
+        <hr>
+        <h2>总结</h2>
+        <p class="zj">react项目前后用了大概一周的时间完成,感受到了模块化开发的优点,redux的使用让代码的书写思路更加清晰,第一步发出action,第二步store调用reducer计算得到一个新的state,然后store再调用dispatch发送事件,从而达到更新视图的目的;
+            项目中也使用了mobx,对数据的操作和视图的更新更加方便,大大提高了编程效率,减少了代码量;通过这次项目认识到了自己的很多不足之处,希望在以后的前端生涯中逐步进行完善
+        </p>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
