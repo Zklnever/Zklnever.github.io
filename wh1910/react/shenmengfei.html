@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>React项目总结</title>
+    <style>
+      div {
+        overflow: hidden;
+        width: 90%;
+        margin: 5%;
+        line-height: 30px;
+        font-size: 20px;
+      }
+      h4 {
+        color: green;
+        text-align: center;
+        width: 90%;
+        margin-left: 5%;
+      }
+      p {
+        line-height: 20px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h4>React项目总结</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;React项目写了将近一周，相比上一次Vue
+        项目，稍微进步了那么一丢丢.项目整体写下来，也是磕磕绊绊，并不那么顺利，遇到很多问题，一个问题卡半天,是常态。。。
+      </p>
+      <hr />
+      <p>
+        根据写项目遇到的一些问题，做出bug总结:<br />
+        <span
+          >详情页点击加入购物车，跳转购物车页面的时候，后台提示token不存在，直接拦截到login
+          登录页面。反复重新登录，登录之后进入详情页点击购买，依然提示token不存在，请重新登录。。。<br />
+          尝试查找问题:控制台，没有发现报错，在拦截器打印的congfig里面的data里面的token为空;点开Application--Session
+          Storange发现有token;去后台查看接口，打印前端页面传递的参数，发现为Null，最后才发现是前端页面传参传错，导致数据库查询不到数据，后台响应为code===3000，所以一直token不存在。。。。<br />
+          原因:后台传参，变量名不一致，导致后台查询不到，请求数据一直失败，code始终为3000。token不存在;
+        </span>
+      </p>
+      <hr />
+      <p>
+        项目总结:项目内容相对简单，只实现了基本页面功能：
+        <br />
+        1.短信验证登录；<br />
+        2.搜索 <br />
+        3.购物车,地址新增,渲染<br />
+        4. 选项卡列表渲染<br />
+        5.组件/ mobx的使用
+      </p>
+    </div>
+  </body>
+</html>
