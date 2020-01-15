@@ -1,0 +1,53 @@
+diff a/wh1910/react/jinjinfeng.html b/wh1910/react/jinjinfeng.html	(rejected hunks)
+@@ -0,0 +1,50 @@
++<!DOCTYPE html>
++<html lang="en">
++
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <meta http-equiv="X-UA-Compatible" content="ie=edge">
++    <title>金锦锋-react 总结</title>
++</head>
++
++<body>
++    <h2>react-bug 
++
++    </h2>
++
++
++    <h3>1.antd栅格布局左边的sider组件里面的  selectKey问题高亮一直解决不了</h3>
++    <h3>2.文件上传请求方式带参数问题,,,好像用axios.post用不了,必须用axios(type:"POST"),,,然后想在文件对象上额外增加参数,后台取不出来</h3>
++  
++
++    <hr>
++
++
++
++    <h2>react-难点</h2>
++
++
++
++    <h3>1.antd里面comment嵌套评论组件不会用,回复功能还不知道是什么原理</h3>
++    <h3>2.最难受的感觉当属antd里面的表单提交嵌套文件类型数据,还有table组件,用的头晕table组件的key不是很理解</h3>
++
++
++    <hr>
++
++
++
++
++    <h2>react-亮点</h2>
++
++
++
++    <h3>1.功能种类不多,但胜在齐全</h3>
++    <h3>2.沉迷antd无法自拔,整个网站全是应用antd组件,页面相对精致</h3>
++
++
++
++
++</body>
++
++</html>
+\ No newline at end of file
