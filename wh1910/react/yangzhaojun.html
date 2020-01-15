@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聂昌</title>
+</head>
+
+<body>
+    <h2>杨赵军 React 项目日报 </h2>
+    <div>
+        <h2>01.14</h2>
+        <p>
+            第三阶段已经过去了有一个月，这一个月期间，每天都在学习新知识，有时候觉着着实有点喘不开气，特别是通过上周做的react项目来看，实践才能出真知，期间也遇到了好多问题，下面就浅谈一下。
+            <br>
+            首先，react作为一个框架，在我做项目期间，我体会到了它的四个优点。一个是组件化开发，组件的可复用性提高了效率，让页面的结构更加清晰，也少写了不少重复性的代码。第二是它的渲染能力，通过虚拟DOM来操纵节点，React会在内存中维护一个虚拟DOM树，当我们对这个树进行读或写的时候，实际上是对虚拟DOM进行的。当数据变化时，然后React会自动更新虚拟DOM，然后拿新的虚拟DOM和旧的虚拟DOM进行对比，找到有变更的部分，得出一个Patch，然后将这个Patch放到一个队列里，最终批量更新这些Patch到DOM中。当然缺陷也是非常明显的，首次渲染大量DOM时因为多了一层虚拟DOM的计算，会比innerHTML插入方式慢，所以使用时尽量不要一次性渲染大量DOM。第三个就是他的jsx语法。第四个体会比较深入的就是他的数据管理react-redux了。store作为一个管理数据的仓库，存储着页面中的state的一系列数据，页面中state通过connect与页面连接。页面组件想要更新页面，则发送一个请求给action的生成器actioncreater,actioncreator与服务器进行交互，获取所需要更新的数据，然后派发该action给store中的reducer,reducer接收请求，更新state数据,state更新，页面更新。挺简洁的。
+            下面,说说我在项目中遇到的一些问题。在开始配置路由拦截时，一直无法成功，后来放弃使用懒加载，至上线为止也没有弄清楚。第二个就是引入redux时，不知道将哪个js文件作为redux的index文件，导致无法获取store中的公共数据，对照老师的文件才配好redux。第三个是引用ant组件时，不熟悉这个ui库，在操作数据时不知道怎么获取对应的单条数据，在查看接口文档后才明白使用方法。
+        </p>
+    </div>
+    <div>
+        <h2>项目Bug</h2>
+        <p>1.配置路由拦截时，一直无法成功，后来放弃使用懒加载，至上线为止也没有弄清楚</p>
+        <p>2.引入redux时，不知道将哪个js文件作为redux的index文件，导致无法获取store中的公共数据</p>
+        <p>3.引用ant组件时，不熟悉这个ui库，在操作数据时不知道怎么获取对应的单条数据，在查看接口文档后才明白使用方法。</p>
+        <hr>
+    </div> 
+    <div>
+        <h2>项目亮点</h2>
+        <p>1.实现了对后台数据的增删改查</p>
+        <p>2.引入Echarts图表库，将数据已更鲜明直接的方式呈现了出来，方便用户查看</p>
+        <p>3.完成了不同角色的页面显示及对应的功能操作</p>
+        <hr>
+    </div> 
+    <div>
+        <h2>项目难点</h2>
+        <p>1.使用redux+immutable+ant不熟练</p>
+        <p>2.需要经常查看ant组件的api文档</p>
+        <p>3.修改权限后的相关数据修改</p>
+        <hr>
+    </div> 
+
+
+</body>
+
+</html>
